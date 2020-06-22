@@ -16,7 +16,7 @@ Widget menuGrid(BuildContext context) {
     ],
     children: <Widget>[
       GestureDetector(
-        onTap: () => Navigator.pushNamed(context, "/facts"),
+        onTap: () => Navigator.pushNamed(context, "/news"),
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Container(
