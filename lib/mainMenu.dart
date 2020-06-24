@@ -27,7 +27,7 @@ Widget menuGrid(BuildContext context) {
               child: Column(
                 children: <Widget>[
                   Text(
-                    "Fact of the day", // TODO: Implement Fact of the day feature
+                    "News",
                     textAlign: TextAlign.center,
                     style: GoogleFonts.lato(
                         fontSize: 20, fontWeight: FontWeight.bold),
