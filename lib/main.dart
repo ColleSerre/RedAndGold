@@ -44,16 +44,21 @@ class Home extends StatelessWidget {
 }
 
 Future<Map> getBody(BuildContext context) async {
+  final now = DateTime.now();
+  final date = now.year.toString() +
+      "-" +
+      now.month.toString() +
+      "-" +
+      now.day.toString();
   try {
     var response = await http.read(
-        'http://newsapi.org/v2/everything?q=communism&from=2020-05-22&sortBy=popularity&apiKey=f5d7d2d6ea364425a88b196b2af3d53f');
+        'http://newsapi.org/v2/everything?q=communism&from=' +
+            date +
+            '&sortBy=popularity&apiKey=f5d7d2d6ea364425a88b196b2af3d53f');
     Map output = await json.decode(response);
     return output;
   } catch (e) {
     Navigator.pushNamed(context, "/");
-    if (e.toString() == "Request to http://newsapi.org/v2/everything?q=communism&from=2020-05-22&sortBy=popularity&apiKey=f5d7d2d6ea364425a88b196b2af3d53f failed with status 426: Upgrade Required."){
-      showDialog(context: context, child: AlertDialog(title: Text("News API Error: Account Upgrade Required (error 426"),));
-    }
   }
 }
 
