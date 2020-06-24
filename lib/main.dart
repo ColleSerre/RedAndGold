@@ -93,44 +93,23 @@ Widget newsGridView(image1) {
     children: <Widget>[
       Padding(
         padding: const EdgeInsets.all(8.0),
-        child: Container(
-          child: Padding(
-            padding: EdgeInsets.all(8),
-            child: Column(
-              children: <Widget>[
-                Container(
-                  child: FutureBuilder<Widget>(
-                    future: getImage(image1),
-                    builder: (context, snapshot) {
-                      if (snapshot.hasData) {
-                        return Container(
-                          child: snapshot.data,
-                        );
-                      } else {
-                        {
-                          return Text("Loading assets...");
-                        }
-                      }
-                    },
-                  ),
-                )
-              ],
-            ),
-          ),
-          decoration: BoxDecoration(
-            border: Border.all(color: Colors.red[200], width: 3),
-            borderRadius: BorderRadius.circular(20),
-          ),
-        ),
+        child: FutureBuilder<Widget>(future: getImage(image1), builder: (context, snapshot) {
+          if (snapshot.connectionState == ConnectionState.done){
+            return snapshot.data;
+          } else {
+            return Container();
+          }
+        },)
       ),
     ],
   );
 }
 
 Future<Widget> getImage(image1) async {
-  final image = await Image.network(
+  final image = Image.network(
     image1,
     fit: BoxFit.scaleDown,
   );
-  return image;
+
+  return Container(child: image, height: 20, width: 20,decoration: BoxDecoration(border: Border.all(color: Colors.red[100], width: 3)),);
 }
