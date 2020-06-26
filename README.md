@@ -3,4 +3,4 @@ To raise awareness and remove the **devil horns** that have been placed on the M
 
 # Roadmap
 
-Finish "Full text" -> Add "Facts" & "Communism & Marxism today" feautures -> Add "Fact of the day" feature  -> Donations and ads implementation -> Beta release on google play -> Google play release
+Finish "Full text" -> Add "Facts" & "Communism & Marxism today" feautures -> Add "Fact of the day" feature  -> Donations and ads implementation -> Beta release on google play -> Google play release -> App store release ?
