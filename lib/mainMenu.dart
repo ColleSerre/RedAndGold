@@ -3,7 +3,6 @@ import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 Widget menuGrid(BuildContext context) {
-  final size = MediaQuery.of(context).size;
   return StaggeredGridView.count(
     padding: EdgeInsets.all(8),
     crossAxisCount: 2,
