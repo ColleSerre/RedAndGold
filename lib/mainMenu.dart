@@ -65,7 +65,7 @@ Widget menuGrid(BuildContext context) {
                   Padding(
                     padding: const EdgeInsets.only(top: 8.0),
                     child: Text(
-                      "Read the Communist Manifesto.\nThe small book who changed the whold wide world.",
+                      "Read the Communist Manifesto.\nThe small book which changed the whole wide world.",
                       style: TextStyle(fontSize: 16),
                     ),
                   )
@@ -89,22 +89,12 @@ Widget menuGrid(BuildContext context) {
             width: 200,
             child: Padding(
               padding: const EdgeInsets.all(8),
-              child: Column(
-                children: <Widget>[
-                  Text(
-                    "History",
-                    textAlign: TextAlign.center,
-                    style: GoogleFonts.lato(
-                        fontSize: 20, fontWeight: FontWeight.bold),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(top: 40),
-                    child: Text(
-                      "How it all started",
-                      style: TextStyle(fontSize: 19),
-                    ),
-                  )
-                ],
+              child: Center(
+                child: Text(
+                  "History of the movement",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                ),
               ),
             ),
             decoration: BoxDecoration(
@@ -115,7 +105,7 @@ Widget menuGrid(BuildContext context) {
         ),
       ),
       Padding(
-        // Implement Communism & Marxism today feature
+        // Implement contribute feature
         padding: const EdgeInsets.only(
           top: 2,
           left: 8,

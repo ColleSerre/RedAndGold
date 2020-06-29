@@ -5,6 +5,7 @@ import 'package:url_launcher/url_launcher.dart';
 import 'dart:convert';
 import 'commons.dart';
 
+// ignore: missing_return
 Future<Map> getBody(BuildContext context) async {
   final now = DateTime.now();
   final date = now.year.toString() +
@@ -20,7 +21,17 @@ Future<Map> getBody(BuildContext context) async {
     Map output = await json.decode(response);
     return output;
   } catch (e) {
+    print(e.toString());
     Navigator.pushNamed(context, "/");
+    if (e.toString() ==
+        "SocketException: Failed host lookup: 'newsapi.org' (OS Error: No address associated with hostname, errno = 7)") {
+      showDialog(
+        context: context,
+        child: AlertDialog(
+          title: Text("Connection Error: Check your Wi-Fi"),
+        ),
+      );
+    }
   }
 }
 

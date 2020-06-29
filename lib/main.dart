@@ -12,6 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      title: "Red & Gold",
       theme: ThemeData(
         brightness: Brightness.light,
         primarySwatch: Colors.red,
@@ -40,4 +41,3 @@ class Home extends StatelessWidget {
     );
   }
 }
-
